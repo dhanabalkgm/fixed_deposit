@@ -33,6 +33,17 @@ gem 'jbuilder', '~> 2.5'
 # Awesome print
 gem 'awesome_print'
 
+# bootstrap 4.0 so alpha
+gem 'bootstrap', '~> 4.0.0.alpha5'
+
+# state management
+gem 'aasm'
+
+# Tether for tooltip and popovers positioning
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

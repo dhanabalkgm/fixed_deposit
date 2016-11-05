@@ -1,6 +1,11 @@
 class Interest < ApplicationRecord
+  include AASM
 
 	enum status: [ :pending, :settled ]
+
+  aasm column: :status, enum: true do
+    state :pending, :initial => true
+  end
 
   belongs_to :deposit
   belongs_to :settled_through
