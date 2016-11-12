@@ -36,6 +36,9 @@ gem 'awesome_print'
 # bootstrap 4.0 so alpha
 gem 'bootstrap', '~> 4.0.0.alpha5'
 
+#font awesomeness
+gem 'font-awesome-sass', '~> 4.7.0'
+
 # state management
 gem 'aasm'
 

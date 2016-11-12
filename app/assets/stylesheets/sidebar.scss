@@ -1,0 +1,38 @@
+.nav-side-menu {
+  background-color: #2e353d;
+  font-family: verdana;
+  font-size: 14px;
+  font-weight: 200;
+  position: fixed;
+  height: 100%;
+  padding-right: 0;
+}
+
+.nav-side-menu ul, .nav-side-menu li {
+  padding: 0px;
+  margin: 0px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.nav-side-menu li {
+  padding-left: 0px;
+  border-left: 3px solid #2e353d;
+  border-bottom: 1px solid #23282e;
+}
+
+.nav-side-menu li:hover {
+  background-color: green;
+}
+
+.nav-side-menu .menu-content {
+  display: block;
+}
+
+.nav-side-menu .menu-content a {
+  color: #e1ffff;
+}
+
+.fa.white-icon {
+  color: #e1ffff;
+}

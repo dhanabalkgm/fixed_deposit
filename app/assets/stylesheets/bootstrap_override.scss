@@ -1,0 +1,22 @@
+a:link, a:visited {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.navbar .form-inline .form-control {
+  border-radius: 20px;
+  background-color: rgb(6, 217, 149);
+  border-color: #e1ffff;
+  color: #e1ffff;
+}
+
+.navbar.navbar-light .navbar-brand {
+  color: #e1ffff;
+}
