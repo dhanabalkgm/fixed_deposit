@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require tether
 //= require bootstrap-sprockets
+//= require bootstrap_sb_admin_base_v2
 //= require_tree .

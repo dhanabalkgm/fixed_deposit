@@ -9,14 +9,11 @@
 </head>
 
 <body>
-<div class="container-fluid">
+<div id="wrapper">
   <%= render 'layouts/navbar' %>
-  <%= render 'layouts/sidebar' %>
-		<div class="row">
-		  <div class="col-sm-10 ">
-		    <%= yield %>
-		  </div>
-		</div>
+  <div id="page-wrapper">
+    <%= yield %>
+  </div>
 </div>
 </body>
 </html>
