@@ -46,6 +46,9 @@ gem 'aasm'
 # jquery data table integration
 gem 'jquery-datatables-rails'
 
+# form builder
+gem 'simple_form'
+
 # Tether for tooltip and popovers positioning
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
