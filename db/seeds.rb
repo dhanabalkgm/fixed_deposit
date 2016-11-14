@@ -7,6 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # -----------------------------------------------------------------------
+# Loading seed file
+# -----------------------------------------------------------------------
+seed_file = File.join(Rails.root, 'db', 'seed.yml')
+config = YAML::load_file(seed_file)
+
+# -----------------------------------------------------------------------
 # Interest Type
 # -----------------------------------------------------------------------
 INTEREST_TYPE = ['Monthly', 'Weekly', 'Add it to deposit']
@@ -29,3 +35,13 @@ SETTLED_THROUGH = ['Cash', 'Net Banking', 'Added to deposit']
 SETTLED_THROUGH.each do |settled_through|
 	SettledThrough.create!(name: settled_through)
 end
+
+# -----------------------------------------------------------------------
+# Depositers
+# -----------------------------------------------------------------------
+Depositer.create(config['depositers'])
+
+# -----------------------------------------------------------------------
+# Deposits
+# -----------------------------------------------------------------------
+Deposit.create(config['deposits'])

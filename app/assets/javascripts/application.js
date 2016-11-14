@@ -12,9 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require dataTables/jquery.dataTables
 //= require turbolinks
 //= require tether
 //= require bootstrap-sprockets
 //= require bootstrap_sb_admin_base_v2
+//= require dataTables/jquery.dataTables
 //= require_tree .

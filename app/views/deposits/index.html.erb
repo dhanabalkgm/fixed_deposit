@@ -3,3 +3,25 @@
     <h1 class="page-header">Deposits</h1>
   </div>
 </div>
+<table id="deposit_lists">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Amount</th>
+    <th>Deposited on</th>
+    <th>Interest Type</th>
+    <th>Mobile</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @deposits.each do |deposit| %>
+    <tr>
+      <td><%= deposit.depositer_name %></td>
+      <td><%= deposit.amount %></td>
+	    <td><%= deposit.deposited_on %></td>
+      <td><%= deposit.interest_type_name %></td>
+      <td><%= deposit.depositer_mobile %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

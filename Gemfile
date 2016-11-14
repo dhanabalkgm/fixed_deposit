@@ -44,8 +44,7 @@ gem 'font-awesome-sass', '~> 4.7.0'
 gem 'aasm'
 
 # jquery data table integration
-gem 'jquery-datatables-rails', '~> 3.4.0'
-
+gem 'jquery-datatables-rails'
 
 # Tether for tooltip and popovers positioning
 source 'https://rails-assets.org' do

@@ -1,0 +1,102 @@
+depositers:
+      -   name: Dhiya
+          address: jake123
+          mobile: 9986571862
+
+      -   name: Arasi
+          address: jane123
+          mobile: 9842382860
+
+      -   name: Ravi
+          address: jake123
+          mobile: 9788857666
+
+      -   name: Sankar
+          address: jane123
+          mobile: 9986571862
+
+
+deposits:
+      -   amount: 200000
+          deposited_on: 14/11/2016
+          depositer_id: 1
+          interest_type_id: 1
+          interest_percent_id: 3
+
+      -   amount: 300000
+          deposited_on: 10/11/2016
+          depositer_id: 2
+          interest_type_id: 1
+          interest_percent_id: 3
+
+      -   amount: 250000
+          deposited_on: 14/03/2016
+          depositer_id: 3
+          interest_type_id: 1
+          interest_percent_id: 3
+
+      -   amount: 350000
+          deposited_on: 10/05/2016
+          depositer_id: 4
+          interest_type_id: 1
+          interest_percent_id: 3
+
+      -   amount: 200000
+          deposited_on: 14/07/2016
+          depositer_id: 2
+          interest_type_id: 1
+          interest_percent_id: 3
+
+      -   amount: 300000
+          deposited_on: 10/11/2016
+          depositer_id: 1
+          interest_type_id: 1
+          interest_percent_id: 3
+
+      -   amount: 100000
+          deposited_on: 14/11/2016
+          depositer_id: 3
+          interest_type_id: 1
+          interest_percent_id: 3
+
+      -   amount: 100000
+          deposited_on: 10/11/2016
+          depositer_id: 4
+          interest_type_id: 1
+          interest_percent_id: 3
+
+      -   amount: 700000
+          deposited_on: 14/11/2016
+          depositer_id: 2
+          interest_type_id: 1
+          interest_percent_id: 3
+
+      -   amount: 300000
+          deposited_on: 10/11/2016
+          depositer_id: 1
+          interest_type_id: 1
+          interest_percent_id: 3
+
+      -   amount: 50000
+          deposited_on: 14/11/2016
+          depositer_id: 4
+          interest_type_id: 1
+          interest_percent_id: 3
+
+      -   amount: 100000
+          deposited_on: 10/11/2016
+          depositer_id: 1
+          interest_type_id: 1
+          interest_percent_id: 3
+
+      -   amount: 250000
+          deposited_on: 14/11/2016
+          depositer_id: 4
+          interest_type_id: 1
+          interest_percent_id: 3
+
+      -   amount: 300000
+          deposited_on: 10/11/2016
+          depositer_id: 1
+          interest_type_id: 1
+          interest_percent_id: 3
