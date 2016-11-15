@@ -1,0 +1,26 @@
+<%= simple_form_for @deposit do |f| %>
+  <div class="row">
+    <div class="col-md-4">
+      <%= f.input :amount %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :deposited_on, as: :date %>
+    </div>
+    <div class="col-md-4">
+      <%= f.association :depositer, prompt: '-- Select Depositer --' %>
+    </div>
+  </div>
+	<div class="row">
+	  <div class="col-md-4">
+	    <%= f.association :interest_type %>
+		</div>
+	  <div class="col-md-4">
+	    <%= f.association :interest_percent, label_method: :number %>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="col-md-4">
+		  <%= f.button :button %>
+		</div>
+	</div>
+<% end %>

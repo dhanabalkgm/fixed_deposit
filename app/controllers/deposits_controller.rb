@@ -7,6 +7,15 @@ class DepositsController < ApplicationController
     new_deposit
   end
 
+  def create
+    build_deposit
+    save_deposit or render 'new'
+  end
+
+  def show
+    load_deposit
+  end
+
   private
 
   def load_deposits
@@ -14,12 +23,23 @@ class DepositsController < ApplicationController
   end
 
   def new_deposit
-    @deposit ||= deposit_scope.new
+    @deposit ||= deposit_scope.new(interest_type: InterestType.find_by_name(Deposit::DEFAULT_SELECTION[:interest_type]),
+                                   interest_percent: InterestPercent.find_by_number(Deposit::DEFAULT_SELECTION[:interest_percent]))
   end
 
   def build_deposit
     new_deposit
     @deposit.attributes = deposit_params
+  end
+
+  def save_deposit
+    if @deposit.save
+      redirect_to @deposit
+    end
+  end
+
+  def load_deposit
+    @deposit ||= deposit_scope.find params[:id]
   end
 
   def deposit_params

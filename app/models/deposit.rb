@@ -9,4 +9,5 @@ class Deposit < ApplicationRecord
   delegate :name, :mobile, to: :depositer, prefix: true
   delegate :name, to: :interest_type, prefix: true
 
+  DEFAULT_SELECTION = {interest_type: "Monthly", interest_percent: 1.5}
 end

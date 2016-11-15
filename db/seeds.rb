@@ -15,7 +15,7 @@ config = YAML::load_file(seed_file)
 # -----------------------------------------------------------------------
 # Interest Type
 # -----------------------------------------------------------------------
-INTEREST_TYPE = ['Monthly', 'Weekly', 'Add it to deposit']
+INTEREST_TYPE = ['Monthly']#, 'Weekly', 'Add it to deposit']
 INTEREST_TYPE.each do |interest_type|
   InterestType.create!(name: interest_type)
 end	
