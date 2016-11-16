@@ -7,4 +7,8 @@ class Depositer < ApplicationRecord
             length: {minimum: 10, maximum: 15},
             allow_blank: true
 
+  def total_deposits
+    deposits.sum(:amount)
+  end
+
 end

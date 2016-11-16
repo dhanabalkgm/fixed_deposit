@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-lg-4">
+    <label>Amount:</label> <%= number_to_currency(deposit.amount, :unit => "") %>
+  </div>
+  <div class="col-lg-4">
+    <label>Deposited On:</label> <%= deposit.deposited_on %>
+  </div>
+  <div class="col-lg-4">
+    <label>Interest Type:</label> <%= deposit.interest_type_name %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4">
+    <label>Interset Percent:</label> <%= deposit.percent_number %>
+  </div>
+</div>

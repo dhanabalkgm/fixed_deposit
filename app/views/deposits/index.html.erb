@@ -16,7 +16,7 @@
   <tbody>
   <% @deposits.each do |deposit| %>
     <tr>
-      <td><%= deposit.depositer_name %></td>
+      <td><%= link_to deposit.depositer_name, deposit_path(deposit) %></td>
       <td><%= deposit.amount %></td>
 	    <td><%= deposit.deposited_on %></td>
       <td><%= deposit.interest_type_name %></td>

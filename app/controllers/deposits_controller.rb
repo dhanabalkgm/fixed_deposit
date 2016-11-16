@@ -40,6 +40,11 @@ class DepositsController < ApplicationController
 
   def load_deposit
     @deposit ||= deposit_scope.find params[:id]
+    depositer_deposits
+  end
+
+  def depositer_deposits
+    @depositer_deposits ||= @deposit.depositer.deposits.includes(:interest_type, :interest_percent).order("deposited_on desc")
   end
 
   def deposit_params
