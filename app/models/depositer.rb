@@ -8,6 +8,8 @@ class Depositer < ApplicationRecord
             allow_blank: true
 
   def total_deposits
+    return if deposits.blank?
+
     deposits.sum(:amount)
   end
 

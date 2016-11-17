@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Depositers</h1>
+  </div>
+</div>
+<table id="deposit_lists">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Total Deposit</th>
+    <th>Mobile</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @depositers.each do |depositer| %>
+    <tr>
+      <td><%= link_to depositer.name, depositer_path(depositer) %></td>
+      <td><%= depositer.total_deposits %></td>
+      <td><%= depositer.mobile %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

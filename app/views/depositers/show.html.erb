@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Depositer </h1>
+  </div>
+</div>
+<%= render partial: 'show' %>
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header"><%= @depositer.name %>'s Deposit </h1>
+  </div>
+</div>
+<% @depositer.deposits.each do |deposit| %>
+	<%= render partial: 'deposits/show', locals: {deposit: deposit}%>
+	<% end %>
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header"><%= @depositer.name %>'s Total Deposit</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <h3><%= @depositer.total_deposits %></h3>
+  </div>
+</div>
