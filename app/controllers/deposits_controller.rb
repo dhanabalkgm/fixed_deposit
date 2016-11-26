@@ -19,7 +19,8 @@ class DepositsController < ApplicationController
   private
 
   def load_deposits
-    @deposits ||= deposit_scope.includes(:depositer, :interest_type).order("deposited_on desc")
+    @deposits ||= deposit_scope.includes(:depositer, :interest_type)
+                      .order("deposited_on desc")
   end
 
   def new_deposit
@@ -44,11 +45,16 @@ class DepositsController < ApplicationController
   end
 
   def depositer_deposits
-    @depositer_deposits ||= @deposit.depositer.deposits.includes(:interest_type, :interest_percent).order("deposited_on desc")
+    @depositer_deposits ||= @deposit.depositer.deposits.includes(:interest_type, :interest_percent)
+                                .order("deposited_on desc")
   end
 
   def deposit_params
-    params.require(:deposit).permit(:amount, :deposited_on, :interest_type_id, :interest_percent_id, :depositer_id)
+    _params = params.require(:deposit).permit(:amount, :deposited_on,
+                                    :interest_type_id, :interest_percent_id,
+                                    :depositer_id)
+
+    _parse_date_params(_params, [:deposited_on])
   end
 
   def deposit_scope

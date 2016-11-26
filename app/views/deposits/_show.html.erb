@@ -3,7 +3,7 @@
     <label>Amount:</label> <%= number_to_currency(deposit.amount, :unit => "") %>
   </div>
   <div class="col-lg-4">
-    <label>Deposited On:</label> <%= deposit.deposited_on %>
+    <label>Deposited On:</label> <%= fd_date(deposit.deposited_on) %>
   </div>
   <div class="col-lg-4">
     <label>Interest Type:</label> <%= deposit.interest_type_name %>

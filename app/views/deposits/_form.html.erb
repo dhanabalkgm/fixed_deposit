@@ -4,7 +4,7 @@
       <%= f.input :amount %>
     </div>
     <div class="col-md-4">
-      <%= f.input :deposited_on, as: :date %>
+      <%= f.input :deposited_on,as: :string, placeholder: 'DD/MM/YYYY', input_html: { value: fd_date(@deposit.deposited_on)} %>
     </div>
     <div class="col-md-4">
       <%= f.association :depositer, prompt: '-- Select Depositer --' %>

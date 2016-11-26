@@ -52,6 +52,9 @@ gem 'simple_form'
 # select tag with search
 gem 'select2-rails'
 
+# Date parser
+gem 'chronic'
+
 # Tether for tooltip and popovers positioning
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
