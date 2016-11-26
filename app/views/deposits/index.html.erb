@@ -15,13 +15,7 @@
   </thead>
   <tbody>
   <% @deposits.each do |deposit| %>
-    <tr>
-      <td><%= link_to deposit.depositer_name, deposit_path(deposit) %></td>
-      <td><%= deposit.amount %></td>
-	    <td><%= deposit.deposited_on %></td>
-      <td><%= deposit.interest_type_name %></td>
-      <td><%= deposit.depositer_mobile %></td>
-    </tr>
+		<%= render partial: 'index', locals: {deposit: deposit}%>
   <% end %>
   </tbody>
 </table>

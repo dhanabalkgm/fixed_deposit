@@ -13,11 +13,7 @@
   </thead>
   <tbody>
   <% @depositers.each do |depositer| %>
-    <tr>
-      <td><%= link_to depositer.name, depositer_path(depositer) %></td>
-      <td><%= depositer.total_deposits %></td>
-      <td><%= depositer.mobile %></td>
-    </tr>
+		<%= render partial: 'index', locals: {depositer: depositer}  %>
   <% end %>
   </tbody>
 </table>

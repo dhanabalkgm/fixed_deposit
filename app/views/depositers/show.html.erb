@@ -19,6 +19,6 @@
 </div>
 <div class="row">
   <div class="col-lg-12">
-    <h3><%= @depositer.total_deposits %></h3>
+    <h3><%= to_currency_without_precission(@depositer.total_deposits) %></h3>
   </div>
 </div>

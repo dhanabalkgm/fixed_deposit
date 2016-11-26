@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-lg-4">
-    <label>Amount:</label> <%= number_to_currency(deposit.amount, :unit => "") %>
+    <label>Amount:</label> <%= to_currency_without_precission(deposit.amount) %>
   </div>
   <div class="col-lg-4">
     <label>Deposited On:</label> <%= fd_date(deposit.deposited_on) %>

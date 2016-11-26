@@ -1,0 +1,7 @@
+<tr>
+	<td><%= link_to deposit.depositer_name, deposit_path(deposit) %></td>
+	<td><%= to_currency_without_precission(deposit.amount) %></td>
+	<td><%= deposit.deposited_on %></td>
+	<td><%= deposit.interest_type_name %></td>
+	<td><%= deposit.depositer_mobile %></td>
+</tr>
