@@ -3,7 +3,10 @@ class Deposit < ApplicationRecord
   belongs_to :interest_type
   belongs_to :interest_percent
 
-  validates :deposited_on, :depositer_id, :interest_percent_id, :interest_type_id, presence: true
+  # validation for belongs_to is not required because by default ih has in rails 5
+  # http://blog.bigbinary.com/2016/02/15/rails-5-makes-belong-to-association-required-by-default.html
+  
+  validates :deposited_on, presence: true
   validates :amount, presence: true, numericality: { only_integer: true }
 
   scope :all_except, ->(deposit) { where.not(id: deposit)}
