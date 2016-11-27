@@ -5,6 +5,7 @@ class Deposit < ApplicationRecord
 
   # validation for belongs_to is not required because by default ih has in rails 5
   # http://blog.bigbinary.com/2016/02/15/rails-5-makes-belong-to-association-required-by-default.html
+  # validates :depositer_id, :interest_type_id, :interest_percent_id
 
   validates :deposited_on, presence: true
   validates :amount, presence: true, numericality: { only_integer: true }
